@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0">
+  <diagram id="agentforge-v3-arch" name="AgentForge V3 Event-Driven Architecture">
+    <mxGraphModel dx="1600" dy="1050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1050" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        
+        <mxCell id="title" value="AgentForge V3 — 事件驱动多 Agent 编排架构" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="300" y="5" width="1000" height="35" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="lbl_gateway" value="接入层" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="55" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_agent" value="Agent&lt;br&gt;运行时" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="55" y="340" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_bus" value="事件总线" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#b8860b;" vertex="1" parent="1">
+          <mxGeometry x="55" y="630" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_infra" value="基础设施" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="55" y="820" width="80" height="30" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="layer_gateway" value="API Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;verticalAlign=top;align=center;spacingTop=8;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="50" width="1220" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="gw_auth" value="Auth 认证" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="layer_gateway">
+          <mxGeometry x="200" y="40" width="200" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="gw_task" value="Task Router&lt;br&gt;任务路由" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="layer_gateway">
+          <mxGeometry x="510" y="40" width="200" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="gw_result" value="Result Collector&lt;br&gt;结果聚合" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="layer_gateway">
+          <mxGeometry x="820" y="40" width="200" height="42" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="layer_agent" value="Agent Runtime Layer（状态隔离 · 独立上下文）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f8f0;strokeColor=#82b366;strokeWidth=1;verticalAlign=top;align=center;spacingTop=6;fontSize=12;fontStyle=2;fontColor=#5a7a2e;dashed=1;dashPattern=5 3;" vertex="1" parent="1">
+          <mxGeometry x="180" y="190" width="1220" height="390" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="agent1" value="CodeReview Agent&lt;br&gt;代码审查" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalAlign=top;align=center;spacingTop=8;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2460" y="220" width="260" height="335" as="geometry" />
+        </mxCell>
+        <mxCell id="a1_prompt" value="Prompt 模板" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent1">
+          <mxGeometry x="30" y="55" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="a1_llm" value="LLM 调用&lt;br&gt;(Qwen2.5-Coder)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent1">
+          <mxGeometry x="30" y="135" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="a1_parse" value="Output Parse&lt;br&gt;输出解析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent1">
+          <mxGeometry x="30" y="215" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="agent2" value="Test Agent&lt;br&gt;测试执行" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalAlign=top;align=center;spacingTop=8;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2130" y="220" width="260" height="335" as="geometry" />
+        </mxCell>
+        <mxCell id="a2_prompt" value="Prompt 模板" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent2">
+          <mxGeometry x="30" y="55" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="a2_llm" value="LLM 调用&lt;br&gt;(Qwen2.5-Coder)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent2">
+          <mxGeometry x="30" y="135" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="a2_parse" value="Output Parse&lt;br&gt;输出解析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent2">
+          <mxGeometry x="30" y="215" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="agent3" value="Doc Agent&lt;br&gt;文档生成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalAlign=top;align=center;spacingTop=8;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="220" width="260" height="335" as="geometry" />
+        </mxCell>
+        <mxCell id="a3_prompt" value="Prompt 模板" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent3">
+          <mxGeometry x="30" y="55" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="a3_llm" value="LLM 调用&lt;br&gt;(Qwen2.5-Coder)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent3">
+          <mxGeometry x="30" y="135" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="a3_parse" value="Output Parse&lt;br&gt;输出解析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent3">
+          <mxGeometry x="30" y="215" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="agent4" value="Deploy Agent&lt;br&gt;部署验证" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalAlign=top;align=center;spacingTop=8;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1470" y="220" width="260" height="335" as="geometry" />
+        </mxCell>
+        <mxCell id="a4_prompt" value="Prompt 模板" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent4">
+          <mxGeometry x="30" y="55" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="a4_llm" value="LLM 调用&lt;br&gt;(Qwen2.5-Coder)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent4">
+          <mxGeometry x="30" y="135" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="a4_parse" value="Output Parse&lt;br&gt;输出解析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;" vertex="1" parent="agent4">
+          <mxGeometry x="30" y="215" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="event_bus" value="Event Bus  —  异步事件总线（Publish / Subscribe）  —  Agent 间零直接依赖，通过事件解耦" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=3;verticalAlign=middle;align=center;fontSize=13;fontStyle=1;fontColor=#8B6914;" vertex="1" parent="1">
+          <mxGeometry x="180" y="620" width="1220" height="60" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="evt1" value="task.done" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontColor=#996B1F;" vertex="1" parent="1">
+          <mxGeometry x="290" y="990" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="evt2" value="code.review.done" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontColor=#996B1F;" vertex="1" parent="1">
+          <mxGeometry x="555" y="990" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="evt3" value="test.done" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontColor=#996B1F;" vertex="1" parent="1">
+          <mxGeometry x="855" y="990" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="evt4" value="deploy.done" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontColor=#996B1F;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="990" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="layer_infra" value="Shared Infrastructure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;verticalAlign=top;align=center;spacingTop=8;fontSize=14;fontStyle=1;dashed=1;dashPattern=8 4;" vertex="1" parent="1">
+          <mxGeometry x="180" y="740" width="1220" height="180" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="state_store" value="State Store&lt;br&gt;状态存储&lt;br&gt;(Redis)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#b85450;fontSize=12;" vertex="1" parent="layer_infra">
+          <mxGeometry x="100" y="50" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="tool_sandbox" value="Tool Sandbox&lt;br&gt;工具沙箱&lt;br&gt;(Docker)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#b85450;fontSize=12;" vertex="1" parent="layer_infra">
+          <mxGeometry x="460" y="50" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="llm_gateway" value="LLM Gateway&lt;br&gt;vLLM + Qwen2.5-Coder&lt;br&gt;(私有化部署)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#b85450;fontSize=12;" vertex="1" parent="layer_infra">
+          <mxGeometry x="820" y="50" width="200" height="100" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="e_gw_a1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;exitX=0.2;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="layer_gateway" target="agent1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_gw_a2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;exitX=0.4;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="layer_gateway" target="agent2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_gw_a3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;exitX=0.6;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="layer_gateway" target="agent3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_gw_a4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;exitX=0.8;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="layer_gateway" target="agent4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="e_a1_bus" value="publish" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;dashed=1;exitX=0.5;exitY=1;entryX=0.15;entryY=0;fontSize=10;fontColor=#996B1F;" edge="1" parent="1" source="agent1" target="event_bus">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a2_bus" value="publish" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;dashed=1;exitX=0.5;exitY=1;entryX=0.38;entryY=0;fontSize=10;fontColor=#996B1F;" edge="1" parent="1" source="agent2" target="event_bus">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a3_bus" value="publish" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;dashed=1;exitX=0.5;exitY=1;entryX=0.62;entryY=0;fontSize=10;fontColor=#996B1F;" edge="1" parent="1" source="agent3" target="event_bus">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a4_bus" value="publish" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;dashed=1;exitX=0.5;exitY=1;entryX=0.85;entryY=0;fontSize=10;fontColor=#996B1F;" edge="1" parent="1" source="agent4" target="event_bus">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="e_bus_a1" value="subscribe" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;dashed=1;dashPattern=4 4;exitX=0.08;exitY=0;entryX=0;entryY=0.5;fontSize=9;fontColor=#5a7a2e;curved=1;" edge="1" parent="1" source="event_bus" target="agent1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bus_a2" value="subscribe" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;dashed=1;dashPattern=4 4;exitX=0.32;exitY=0;entryX=0;entryY=0.5;fontSize=9;fontColor=#5a7a2e;curved=1;" edge="1" parent="1" source="event_bus" target="agent2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bus_a3" value="subscribe" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;dashed=1;dashPattern=4 4;exitX=0.68;exitY=0;entryX=1;entryY=0.5;fontSize=9;fontColor=#5a7a2e;curved=1;" edge="1" parent="1" source="event_bus" target="agent3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bus_a4" value="subscribe" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;dashed=1;dashPattern=4 4;exitX=0.92;exitY=0;entryX=1;entryY=0.5;fontSize=9;fontColor=#5a7a2e;curved=1;" edge="1" parent="1" source="event_bus" target="agent4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="e_bus_state" value="状态同步" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;dashed=1;exitX=0.15;exitY=1;entryX=0.5;entryY=0;fontSize=10;fontColor=#b85450;" edge="1" parent="1" source="event_bus" target="state_store">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bus_tool" value="工具调用" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;exitX=0.4;exitY=1;entryX=0.5;entryY=0;fontSize=10;fontColor=#b85450;" edge="1" parent="1" source="event_bus" target="tool_sandbox">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bus_llm" value="LLM 推理" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;exitX=0.7;exitY=1;entryX=0.5;entryY=0;fontSize=10;fontColor=#b85450;" edge="1" parent="1" source="event_bus" target="llm_gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="flow_1_2" value="code.review.done" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;dashed=1;curved=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=9;fontColor=#5a7a2e;fontStyle=2;" edge="1" parent="1" source="a1_parse" target="a2_prompt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_2_3" value="test.done" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;dashed=1;curved=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=9;fontColor=#5a7a2e;fontStyle=2;" edge="1" parent="1" source="a2_parse" target="a3_prompt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_3_4" value="doc.done" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;dashed=1;curved=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=9;fontColor=#5a7a2e;fontStyle=2;" edge="1" parent="1" source="a3_parse" target="a4_prompt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="note_isolation" value="每个 Agent 独立进程&lt;br&gt;状态完全隔离" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=15;fillColor=#FFFFCC;strokeColor=#CCCCCC;fontSize=10;fontStyle=2;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="745" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="note_bus" value="事件驱动编排&lt;br&gt;零直接依赖" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=15;fillColor=#FFFFCC;strokeColor=#CCCCCC;fontSize=10;fontStyle=2;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="625" width="130" height="50" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
