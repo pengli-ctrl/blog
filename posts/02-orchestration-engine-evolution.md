@@ -1,7 +1,7 @@
 ---
 title: "从规则引擎到LLM动态编排——多Agent编排引擎的演进路线与渐进式升级策略"
 description: "当YAML分支开始爆炸、长尾场景堆积，编排引擎的下一步该怎么走？从Plan-and-Execute到CORAL到AFlow，三大技术方向的深度拆解，以及生产环境中如何渐进式引入LLM动态编排"
-date: 2026-07-27
+date: 2026-04-18
 tags:
   - AI Agent
   - 动态编排

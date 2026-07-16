@@ -26,12 +26,23 @@ export default defineConfig({
     sidebar: {
       '/posts/': [
         {
-          text: '📂 全部文章',
+          text: '🏗️ 架构设计',
+          collapsed: false,
           items: [
-            { text: '🏗️ 架构设计', link: '/posts/architecture' },
-            { text: '🤖 AI Agent 专栏', link: '/posts/ai-agent' },
+            { text: '01 · AI Agent 编排架构演进全记录', link: '/posts/01-agentforge-architecture-evolution' },
+            { text: '04 · 15微服务OpenAPI平台架构实战', link: '/posts/04-openapi-platform-architecture' },
+            { text: '06 · 300+接口零事故灰度迁移', link: '/posts/06-grayscale-migration-project-management' },
           ]
-        }
+        },
+        {
+          text: '🤖 AI Agent 纵深',
+          collapsed: false,
+          items: [
+            { text: '02 · 从规则引擎到LLM动态编排', link: '/posts/02-orchestration-engine-evolution' },
+            { text: '03 · 故障模式推演与容错设计', link: '/posts/03-production-failure-patterns' },
+            { text: '05 · RAG工程化：幻觉率46%→16.2%', link: '/posts/05-rag-engineering-hallucination-prevention' },
+          ]
+        },
       ]
     },
 
@@ -86,11 +97,9 @@ export default defineConfig({
   base: '/blog/',
 
   ignoreDeadLinks: [
-    // 忽略非 HTML 资源链接（如 .drawio, .pdf 等静态文件）
     /^\/.*\.(drawio|pdf|zip)$/,
   ],
 
-  // Markdown 增强
   markdown: {
     lineNumbers: true,
   }

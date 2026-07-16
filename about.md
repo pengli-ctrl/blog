@@ -21,9 +21,9 @@ description: 彭黎 - AI Agent 架构师 / 后端技术负责人
 ## 📮 联系方式
 
 - **GitHub**：[github.com/pengli-ctrl](https://github.com/pengli-ctrl)
-- **邮箱**：your-email@example.com
-- **掘金**：[掘金主页链接]
-- **CSDN**：[CSDN 主页链接]
+- **邮箱**：pl2847253@gmail.com
+- **掘金**：[掘金主页](https://juejin.cn/user/4140096632135322)
+- **CSDN**：[CSDN 博客](https://blog.csdn.net/qq_45100339?type=blog)
 
 ## 💼 开源项目
 
@@ -34,6 +34,6 @@ description: 彭黎 - AI Agent 架构师 / 后端技术负责人
 1. **AI Agent 架构实战**：多 Agent 编排、事件驱动、状态管理的真实落地经验
 2. **技术选型对比**：向量数据库、LLM 推理引擎、消息队列的实测对比
 3. **架构复盘**：从深信服代码审查 Agent 到 AgentForge 的完整演进历程
-4. **工程化踩坑**：线上故障复盘、性能调优、架构兜底方案
+4. **工程化踩坑**：故障模式推演、性能调优、架构兜底方案
 
 > 每篇文章都来自真实项目，带架构图、带代码、带数据、带踩坑。不搬运文档，不堆砌概念。
