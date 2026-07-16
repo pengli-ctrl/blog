@@ -29,18 +29,18 @@ export default defineConfig({
           text: '🏗️ 架构设计',
           collapsed: false,
           items: [
-            { text: '01 · AI Agent 编排架构演进全记录', link: '/posts/01-agentforge-architecture-evolution' },
-            { text: '04 · 15微服务OpenAPI平台架构实战', link: '/posts/04-openapi-platform-architecture' },
-            { text: '06 · 300+接口零事故灰度迁移', link: '/posts/06-grayscale-migration-project-management' },
+            { text: '02 · 15微服务OpenAPI平台架构实战', link: '/posts/02-openapi-platform-architecture' },
+            { text: '03 · 300+接口零事故灰度迁移', link: '/posts/03-grayscale-migration-project-management' },
+            { text: '04 · AI Agent 编排架构演进全记录', link: '/posts/04-agentforge-architecture-evolution' },
           ]
         },
         {
           text: '🤖 AI Agent 纵深',
           collapsed: false,
           items: [
-            { text: '02 · 从规则引擎到LLM动态编排', link: '/posts/02-orchestration-engine-evolution' },
-            { text: '03 · 故障模式推演与容错设计', link: '/posts/03-production-failure-patterns' },
-            { text: '05 · RAG工程化：幻觉率46%→16.2%', link: '/posts/05-rag-engineering-hallucination-prevention' },
+            { text: '01 · RAG工程化：幻觉率46%→16.2%', link: '/posts/01-rag-engineering-hallucination-prevention' },
+            { text: '05 · 从规则引擎到LLM动态编排', link: '/posts/05-orchestration-engine-evolution' },
+            { text: '06 · 故障模式推演与容错设计', link: '/posts/06-production-failure-patterns' },
           ]
         },
       ]

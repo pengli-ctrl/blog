@@ -22,7 +22,7 @@ npm run preview
 
 ## 📝 文章目录
 
-- [AI Agent 多智能体编排架构实战](./posts/01-agentforge-architecture-evolution.md) — 三版架构演进复盘
+- [AI Agent 多智能体编排架构实战](./posts/04-agentforge-architecture-evolution.md) — 三版架构演进复盘
 
 ## 📂 目录结构
 

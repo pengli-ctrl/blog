@@ -9,7 +9,7 @@ description: 系统架构设计、重构实战、技术选型文章
 
 | 日期 | 标题 | 标签 |
 |------|------|------|
-| 2026-07-17 | [AI Agent 多智能体编排架构实战：从单Agent到事件驱动的架构演进与踩坑全记录](/posts/01-agentforge-architecture-evolution) | `AI Agent` `架构演进` `事件驱动` `多智能体` |
+| 2026-07-17 | [AI Agent 多智能体编排架构实战：从单Agent到事件驱动的架构演进与踩坑全记录](/posts/04-agentforge-architecture-evolution) | `AI Agent` `架构演进` `事件驱动` `多智能体` |
 
 ---
 
