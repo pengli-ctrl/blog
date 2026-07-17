@@ -27,7 +27,7 @@ description: 彭黎 - AI Agent 架构师 / 后端技术负责人
 
 ## 💼 开源项目
 
-- **[AgentForge](https://github.com/pengli-ctrl/agentforge)** — 事件驱动多 Agent 编排平台，支持状态隔离、工具沙箱、动态编排
+- **[AgentForge](https://github.com/pengli-ctrl/AgentForge)** — 事件驱动多 Agent 编排平台，20,000 行 Python，466 个测试，支持状态隔离、工具沙箱、动态编排
 
 ## 📌 这个博客写什么
 

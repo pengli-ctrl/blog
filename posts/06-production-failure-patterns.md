@@ -727,5 +727,5 @@ async def semantic_assert(llm_output: str, expectation: str) -> bool:
 ---
 
 *作者：彭黎，8年后端研发，3年团队管理，专注 AI Agent 架构方向。*
-*🔗 个人博客：[https://pengli-ctrl.github.io/blog](https://pengli-ctrl.github.io/blog) | GitHub：[github.com/pengli-ctrl](https://github.com/pengli-ctrl)*
+*🔗 个人博客：[https://pengli-ctrl.github.io/blog](https://pengli-ctrl.github.io/blog) | AgentForge 开源项目：[github.com/pengli-ctrl/AgentForge](https://github.com/pengli-ctrl/AgentForge)*
 *📖 上一篇：[从规则引擎到LLM动态编排](/posts/05-orchestration-engine-evolution) | [架构演进实战](/posts/04-agentforge-architecture-evolution)*

@@ -249,5 +249,5 @@ class LLMRouter:
 ---
 
 *作者：彭黎，8年后端研发，3年团队管理，专注 AI Agent 架构方向。*
-*🔗 个人博客：[https://pengli-ctrl.github.io/blog](https://pengli-ctrl.github.io/blog) | GitHub：[github.com/pengli-ctrl](https://github.com/pengli-ctrl)*
+*🔗 个人博客：[https://pengli-ctrl.github.io/blog](https://pengli-ctrl.github.io/blog) | AgentForge 开源项目：[github.com/pengli-ctrl/AgentForge](https://github.com/pengli-ctrl/AgentForge)*
 *📖 上一篇：[AI Agent 多智能体编排架构实战：从PoC到事件驱动的架构演进](/posts/04-agentforge-architecture-evolution)*
